@@ -1,15 +1,23 @@
-template <typename T>
-struct NodoArbol {
-    T dato;                 
-    NodoArbol<T>* izq;      
-    NodoArbol<T>* der;      
-    int altura;             // se usará para el AVL que necesita altura (en el binario normal se ignora)
+#ifndef _NODOBINARIO_H__
+#define _NODOBINARIO_H__
 
-    NodoArbol(T valor) {
-        dato = valor;
-        izq = 0;
-        der = 0;
-        altura = 1;
-    }
+#include <iostream>
+
+
+
+using namespace std;
+
+template <class T>
+class NodoArbol {
+    public:
+        T dato;                 
+        NodoArbol<T> *izq;      
+        NodoArbol<T> *der;      
+        int altura;     
+    
+        NodoArbol(T valor);
+
 };
 
+#include "NodoArbol.hxx"
+#endif

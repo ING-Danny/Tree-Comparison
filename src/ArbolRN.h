@@ -1,25 +1,17 @@
+#ifndef ARBOLRN_H
+#define ARBOLRN_H
+
 #include <set>
 #include <iostream>
-using namespace std;
 
-struct ArbolRN {
-    set<int> datos;
+class ArbolRN {
+private:
+    std::set<int> datos;  // Usamos std::set para simular el árbol rojo-negro
+
+public:
+    void insertarRN(int valor);
+    void eliminarRN(int valor);
+    void mostrarEnOrdenRN() const;
 };
-
-// Insertar un código
-void insertarRN(ArbolRN &arbol, int valor) {
-    arbol.datos.insert(valor);
-}
-
-// Eliminar un código
-void eliminarRN(ArbolRN &arbol, int valor) {
-    arbol.datos.erase(valor);
-}
-
-// Mostrar recorrido en orden
-void mostrarEnOrdenRN(const ArbolRN &arbol) {
-    for (int valor : arbol.datos) {
-        cout << valor << " ";
-    }
-    cout << endl;
-}
+#include "ArbolRN.cxx"
+#endif 
