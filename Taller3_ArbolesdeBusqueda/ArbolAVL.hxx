@@ -21,8 +21,7 @@ int maximo(int a, int b) {
 template < class T >
 NodoArbol<T>* ArbolAVL<T>::minValueNode(NodoArbol<T>* nodo) {
     NodoArbol<T>* current = nodo;
-
-    // loop down to find the leftmost leaf
+   
     while (current->izq != nullptr)
         current = current->izq;
 
